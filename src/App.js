@@ -1,9 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Views from './views';
-import { Route, Switch } from 'react-router-dom';
+import { Route, HashRouter, Switch } from 'react-router-dom';
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 import { THEME_CONFIG } from './configs/AppConfig';
 
@@ -17,11 +16,11 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <ThemeSwitcherProvider themeMap={themes} defaultTheme={THEME_CONFIG.currentTheme} insertionPoint="styles-insertion-point">
-          <Router>
+          <HashRouter>
             <Switch>
               <Route path="/" component={Views}/>
             </Switch>
-          </Router>
+          </HashRouter>
         </ThemeSwitcherProvider>
       </Provider>
     </div>

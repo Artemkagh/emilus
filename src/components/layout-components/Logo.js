@@ -4,6 +4,8 @@ import { APP_NAME } from 'configs/AppConfig';
 import { connect } from "react-redux";
 import utils from 'utils';
 import { Grid } from 'antd';
+import smalllogo from './logo-sm.png'
+import logo from './logo.png'
 
 const { useBreakpoint } = Grid;
 
@@ -25,17 +27,18 @@ const getLogoWidthGutter = (props, isMobile) => {
 
 const getLogo = (props) => {
   const { navCollapsed, logoType } = props;
+  console.log('logos ----', props);
   if(logoType === 'light') {
     if(navCollapsed) {
-      return '/img/logo-sm-white.png'
+      return './logo-sm-white.png'
     }
-    return '/img/logo-white.png'
+    return './logo-white.png'
   }
 
   if (navCollapsed) {
-    return '/img/logo-sm.png'
+    return smalllogo
   }
-  return '/img/logo.png'
+  return logo
 }
 
 const getLogoDisplay = (isMobile, mobileLogo) => {
