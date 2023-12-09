@@ -47,7 +47,6 @@ export class ClientList extends Component {
 		.then(json => this.setClients(json));
 	}	
 	render() {
-		console.log('index ----',this.state.selectedUser);
 		const { userProfileVisible, selectedUser, clients } = this.state;
 		const tableColumns = [
 			{

@@ -50,7 +50,7 @@ export const AppLayout = ({ navCollapsed, navType, location }) => {
       {(isNavTop && !isMobile) ? <TopNav routeInfo={currentRouteInfo}/> : null}
       <Layout className="app-container">
         {(isNavSide && !isMobile) ? <SideNav routeInfo={currentRouteInfo}/> : null }
-        <Layout className="app-layout" >
+        <Layout className="app-layout">
           <div className={`app-content ${isNavTop ? 'layout-top-nav' : ''}`}>
             <PageHeader display={currentRouteInfo?.breadcrumb} title={currentRouteInfo?.title} />
             <Content>
