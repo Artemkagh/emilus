@@ -1,0 +1,2 @@
+(this.webpackJsonpemilus=this.webpackJsonpemilus||[]).push([[16],{528:function(s,t,e){"use strict";e.r(t);e(0);var o=e(5);t.default=()=>Object(o.jsx)("div",{children:"Catalog component works too!"})}}]);
+//# sourceMappingURL=16.88e907f6.chunk.js.map
